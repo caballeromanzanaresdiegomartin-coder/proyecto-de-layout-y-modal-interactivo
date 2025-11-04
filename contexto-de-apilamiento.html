@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,100;1,300&display=swap');
+    :root {
+      --yellow: #ffd602;
+      --red: #d5040a;
+      --blue: #036cb6;
+    }
     body {
+      font-family: 'Lato', sans-serif;
       height: 100vh;
       margin: 0;
       overflow: hidden;
@@ -14,10 +22,21 @@
     .page {
       position: relative;
       height: 100vh;
+      width: 100%;
     }
     .container {
       position: absolute;
       z-index: 1;
+
+      display: grid;
+      grid-template-columns: 55% 45%;
+      grid-template-rows: 20% 50% 30%;
+      grid-template-areas: "nav     aside"
+                           "section aside"
+                           "footer  aside";
+
+      height: 100%;
+      width: 100%;
     }
     .loader {
       background: pink;
@@ -127,5 +146,5 @@
     <!-- Modal -->
     <section></section>
   </div>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9996f1967f51bb9f',t:'MTc2MjI4OTAwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
