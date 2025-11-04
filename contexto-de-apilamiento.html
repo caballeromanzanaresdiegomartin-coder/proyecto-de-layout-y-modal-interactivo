@@ -158,6 +158,50 @@
 
       height: 100%;
     }
+    .footer {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+
+      background: var(--yellow);
+      border-radius: 0 80px 0 0;
+      transform: translateY(100%);
+
+      animation-name: footer;
+      animation-duration: 0.5s;
+      animation-delay: 2.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @keyframes footer {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    .footer div {
+      background: var(--blue);
+      width: 130px;
+      height: 50%;
+      border-radius: 20px 20px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+    .footer div:hover img {
+      cursor: pointer;
+      transform: translateY(-20px) scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .footer div img {
+      width: 160px;
+      position: absolute;
+      bottom: 30px;
+
+      transform: translateY(0px) scale(1);
+      transition: transform 0.5s ease-in-out;
+    }
     .loader {
       background: pink;
       width: 100%;
@@ -215,6 +259,19 @@
         transform: scale(1);
       }
     }
+    .hidden {
+      display: none;
+    }
+    .visible {
+      display: grid;
+    }
+    .modal {
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      z-index: 4;
+    }
   </style>
 </head>
 <body>
@@ -245,9 +302,9 @@
         <img src="https://i.ibb.co/x16pz1x/super-man.png" alt="superman">
       </section>
 
-      <section>
-        <div>
-          <img src="" alt="">
+      <section class="footer">
+        <div id="button1">
+          <img src="https://i.ibb.co/tKWqw8J/spiderman.png" alt="spiderman">
         </div>
         <div>
           <img src="" alt="">
@@ -264,7 +321,11 @@
       <div></div>
     </section>
     <!-- Modal -->
-    <section></section>
+    <section class="modal hidden"></section>
   </div>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9997045beb97ea73',t:'MTc2MjI4OTc3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>
+  const modal = document.querySelector('.modal')
+  const button1 = document.querySelector('#button1')
+</script>
 </html>
